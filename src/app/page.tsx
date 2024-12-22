@@ -28,7 +28,7 @@ export default function Home() {
           <CardHeader>
             <CardTitle>Sign in</CardTitle>
             <CardDescription>
-              Make changes to your account here. Click save when you're done.
+              Reconnect and step back into the vibrant world of ever-changing perspectives. Let's continue creating your unique kaleidoscope.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2">
@@ -51,7 +51,7 @@ export default function Home() {
           <CardHeader>
             <CardTitle>Register</CardTitle>
             <CardDescription>
-            Discover a community where every connection adds a new color to your journey. Join us today and be part of something beautifully unique.
+              Discover a community where every connection adds a new color to your journey. Join us today and be part of something beautifully unique.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2">
