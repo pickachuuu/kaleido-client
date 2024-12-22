@@ -51,7 +51,7 @@ export default function Home() {
           <CardHeader>
             <CardTitle>Register</CardTitle>
             <CardDescription>
-              Change your password here. After saving, you'll be logged out.
+            Discover a community where every connection adds a new color to your journey. Join us today and be part of something beautifully unique.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-2">
