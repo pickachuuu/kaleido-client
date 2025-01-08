@@ -1,5 +1,14 @@
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
+import { DefaultSession } from "next-auth";
+
+declare module "next-auth" {
+  interface Session {
+    user?: {
+      id: string;
+    } & DefaultSession["user"]
+  }
+}
 
 export async function getSession() {
   return await getServerSession();
