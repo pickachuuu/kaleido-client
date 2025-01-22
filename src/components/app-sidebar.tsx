@@ -20,12 +20,12 @@ const items = [
   },
   {
     title: "Messages",
-    url: "#",
+    url: "/home/messages",
     icon: Inbox,
   },
   {
     title: "Notifications",
-    url: "#",
+    url: "/home/notifications",
     icon: Bell,
   },
   {
