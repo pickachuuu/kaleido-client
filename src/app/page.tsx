@@ -15,6 +15,8 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
+import { Suspense } from "react"
+
 export default function Home() {
   return (
     <div className="flex items-center justify-center h-screen ">
