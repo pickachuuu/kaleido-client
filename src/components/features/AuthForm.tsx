@@ -13,12 +13,12 @@ export default function AuthForm() {
                 <Card.Content className="h-96">
                     <div className="col col-span-1">
                         <div>
-                            <Button className="w-full my-2">
+                            <Button className="w-full my-2" startIcon="/images/Logo/google.png">
                                 Sign in with Google
                             </Button>
                         </div>
                         <div>
-                            <Button className="w-full my-2">
+                            <Button className="w-full my-2" startIcon="/images/Logo/github.png">
                                 Sign in with Github
                             </Button>
                         </div>
