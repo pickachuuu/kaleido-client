@@ -1,7 +1,16 @@
+import Image from "next/image"
+
+
 export default function Banner() {
     return (
         <div className="flex items-center justify-center">
-            Banner
+            <Image
+                src="/images/Logo/Kaleido.png"
+                alt="Banner Image"
+                width={620}
+                height={620}
+                className="rounded-lg shadow-lg"    
+            />
         </div>
     )
 }
