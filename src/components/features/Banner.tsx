@@ -7,8 +7,8 @@ export default function Banner() {
             <Image
                 src="/images/Logo/Kaleido.png"
                 alt="Banner Image"
-                width={420}
-                height={420}
+                width={520}
+                height={520}
                 className="rounded-lg shadow-lg"    
             />
         </div>
