@@ -40,7 +40,7 @@ const Button: React.FC<ButtonProps> = ({
   size, 
   startIcon,
   endIcon,
-  iconSize = 16, // default size
+  iconSize = 24,
   children,
   ...props 
 }) => {
@@ -55,6 +55,7 @@ const Button: React.FC<ButtonProps> = ({
           alt="start icon"
           width={iconSize}
           height={iconSize}
+          className='mr-2' // margin right for spacing
         />
       )}
       {children}
