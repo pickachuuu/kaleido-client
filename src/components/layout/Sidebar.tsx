@@ -36,8 +36,7 @@ export default function Sidebar() {
                 })}
 
                 {/* More Button */}
-
-                <div className='flex items-center gap-3 px-3 py-2 text-sm'>
+                <div className='flex items-center gap-3 px-3 py-2 text-sm cursor-pointer hover:bg-zinc-900 rounded-3xl'>
                     <DotsThreeCircle size={32} color='#ffffff'/>
                     <span className='text-xl'>More</span>
                 </div>
