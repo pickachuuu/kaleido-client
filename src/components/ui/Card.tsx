@@ -1,11 +1,36 @@
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+import { cva, type VariantProps } from 'class-variance-authority';
+import { cn } from '@/lib/utils';
+
+const CardVariants = cva(
+  'rounded-lg p-6',
+  {
+    variants: {
+      variant: {
+        default: '',
+        outline: 'border-1 border-zinc-900',
+      },
+      size: {
+        default: 'h-96 w-56',
+        sm: 'h-8 px-3 text-sm',
+        lg: 'h-12 px-6 text-base',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  }
+);
+
+interface CardProps extends React.HTMLAttributes<HTMLDivElement>,
+  VariantProps<typeof CardVariants> {
     children: React.ReactNode;
     className?: string;
 }
 
-export default function Card({ children, className, ...props}: CardProps) {
+export default function Card({ children, className, variant, ...props}: CardProps) {
     return (
-        <div className={`shadow-md rounded-lg p-6 ${className}`} {...props}>
+        <div className={cn(CardVariants({variant, className}))} {...props}>
             {children}
         </div>
     );
