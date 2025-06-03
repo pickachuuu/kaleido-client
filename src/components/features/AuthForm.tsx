@@ -1,3 +1,4 @@
+'use client';
 import Card from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 
@@ -18,7 +19,7 @@ export default function AuthForm() {
                             </Button>
                         </div>
                         <div>
-                            <Button className="w-full my-2" startIcon="/images/Logo/github.png">
+                            <Button className="w-full my-2" startIcon="/images/Logo/github.png" onClick={() => window.location.href = '/home'}>
                                 Sign in with Github
                             </Button>
                         </div>
