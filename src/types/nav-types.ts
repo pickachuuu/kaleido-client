@@ -1,8 +1,9 @@
 import { LucideIcon } from "lucide-react";
+import { IconProps }  from "phosphor-react";
 
 export interface SideBarItem {
     title: string;
     href: string;
-    icon?: LucideIcon; 
+    icon?: React.ForwardRefExoticComponent<IconProps & React.RefAttributes<SVGSVGElement>>;
     children?: SideBarItem[]; 
 }
