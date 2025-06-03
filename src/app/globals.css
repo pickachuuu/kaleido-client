@@ -19,6 +19,10 @@
   }
 }
 
+html{
+  scrollbar-gutter: stable;
+}
+
 body {
   overscroll-behavior: none;
   background: var(--background);
