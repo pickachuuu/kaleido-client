@@ -1,5 +1,5 @@
 import { SideBarItem } from '@/types/nav-types';
-import { House, Search, Bell, Mail, User } from 'lucide-react';
+import { House, Binoculars, Bell, ChatCenteredText, User } from 'phosphor-react'
 
 export const sidebarNavItems: SideBarItem[] = [
   {
@@ -10,7 +10,7 @@ export const sidebarNavItems: SideBarItem[] = [
   {
     title: 'Explore',
     href: '/explore',
-    icon: Search
+    icon: Binoculars
   },
   {
     title: 'Notifications',
@@ -20,7 +20,7 @@ export const sidebarNavItems: SideBarItem[] = [
 {
     title: 'Messages',
     href: '/messages',
-    icon: Mail
+    icon: ChatCenteredText
   },
   {
     title: 'Profile',
