@@ -1,29 +1,30 @@
 import { SideBarItem } from '@/types/nav-types';
+import { House, Search, Bell, Mail, User } from 'lucide-react';
 
 export const sidebarNavItems: SideBarItem[] = [
   {
     title: 'Home',
     href: '/home',
-    icon: ''
+    icon: House
   },
   {
     title: 'Explore',
     href: '/explore',
-    icon: ''
+    icon: Search
   },
   {
     title: 'Notifications',
-    href: '/Notifications',
-    icon: ''
+    href: '/notifications',
+    icon: Bell
   },
 {
     title: 'Messages',
-    href: '/Messages',
-    icon: ''
+    href: '/messages',
+    icon: Mail
   },
   {
     title: 'Profile',
-    href: '/Profile',
-    icon: ''
+    href: '/profile',
+    icon: User
   },
 ];
