@@ -9,7 +9,6 @@ export default function Banner() {
                 alt="Banner Image"
                 width={520}
                 height={520}
-                className="rounded-lg shadow-lg"    
             />
         </div>
     )
