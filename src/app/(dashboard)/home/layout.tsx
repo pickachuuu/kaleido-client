@@ -6,12 +6,12 @@ export default function HomeLayout({
 
     return (
         <div className="">
-            <div className="border-x-1 h-screen max-w-3xl border-gray-700">
+            <div className="border-x-1 h-screen max-w-3xl border-zinc-700">
                 <div className="grid grid-cols-2">
-                    <div className=" border-b-1 border-gray-700 p-3 text-center hover:bg-zinc-800">
+                    <div className=" border-b-1 border-zinc-700 p-3 text-center hover:bg-zinc-900">
                         For you
                     </div>
-                    <div className="border-b-1 border-gray-700 p-3 text-center hover:bg-zinc-800">
+                    <div className="border-b-1 border-zinc-700 p-3 text-center hover:bg-zinc-900">
                         Following
                     </div>
                 </div>
