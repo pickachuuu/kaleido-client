@@ -21,7 +21,7 @@ export const sidebarNavItems: SideBarItem[] = [
     href: '/Messages',
     icon: ''
   },
-{
+  {
     title: 'Profile',
     href: '/Profile',
     icon: ''
