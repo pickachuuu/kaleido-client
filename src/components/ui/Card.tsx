@@ -10,9 +10,8 @@ const CardVariants = cva(
         outline: 'border-1 border-zinc-900',
       },
       size: {
-        default: 'h-96 w-56',
-        sm: 'h-8 px-3 text-sm',
-        lg: 'h-12 px-6 text-base',
+        default: 'w-56',
+        auth: 'w-96',
       },
     },
     defaultVariants: {
@@ -28,9 +27,9 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement>,
     className?: string;
 }
 
-export default function Card({ children, className, variant, ...props}: CardProps) {
+export default function Card({ children, className, variant, size, ...props}: CardProps) {
     return (
-        <div className={cn(CardVariants({variant, className}))} {...props}>
+        <div className={cn(CardVariants({variant, className, size}))} {...props}>
             {children}
         </div>
     );
