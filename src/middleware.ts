@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
-  const isAuthenticated = false // Replace with your auth check
+  const isAuthenticated = true // Replace with your auth check
 
   // Redirect root to appropriate page
   if (request.nextUrl.pathname === '/') {
