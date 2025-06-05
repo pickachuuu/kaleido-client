@@ -7,7 +7,7 @@ const CardVariants = cva(
     variants: {
       variant: {
         default: '',
-        outline: 'border-1 border-zinc-900 p-6',
+        outline: 'border-1 border-zinc-700 p-2',
       },
       size: {
         default: 'w-82',
