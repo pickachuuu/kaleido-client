@@ -6,7 +6,7 @@ const mainLayoutVariants = cva(
     {
         variants: {
             variant: {
-                default:'border-l-1 sm:border-x-1 md:min-w-xl max-w-xl',
+                default:'border-l-1 sm:border-x-1 md:min-w-[36rem] max-w-xl',
                 message:'border-l-1 sm:border-x-1 md:min-w-sm max-w-xl',
             },
         },
