@@ -43,9 +43,9 @@ export default function Sidebar() {
                 
                 {/* Post Button */}
                 <       div className='flex justify-center'>
-                    <Button className="hidden lg:block 
+                    <Button onClick={() => alert('Create Post')} className="hidden lg:block 
                     rounded-full md:rounded-3xl w-full my-2 font-bold text-black aspect-square sm:aspect-auto" size={'lg'}>
-                        <span className="hidden lg:inline text-lg">Create Post</span>
+                        <span className="hidden lg:inline text-lg">Post</span>
                     </Button>
 
                     <button className='lg:hidden' onClick={() => alert('Create Post')}>
