@@ -6,9 +6,9 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex justify-center w-full">
-      <div className="flex max-w-7xl w-full">
-        <aside className="lg:w-64 sm:w-16 h-screen sticky top-0 shrink-0">
+    <div className="flex justify-center">
+      <div className="flex max-w-7xl w-5xl xl:w-full">
+        <aside className="xl:w-64 sm:w-16 h-screen sticky top-0 shrink-0">
           <Sidebar />
         </aside>
         <main className="flex-1 min-h-screen">
