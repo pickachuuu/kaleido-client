@@ -1,7 +1,12 @@
 export default function Home(){
     return (
-        <div className="">
-            
+        <div>
+            <div className="h-screen">
+                Scroll test
+            </div>
+            <div className="h-screen">
+                Scroll test
+            </div>
         </div>
     )
 }
