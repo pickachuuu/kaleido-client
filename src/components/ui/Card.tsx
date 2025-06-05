@@ -12,6 +12,7 @@ const CardVariants = cva(
       size: {
         default: 'w-82',
         auth: 'w-full',
+        sm: 'h-54 w-64',
       },
     },
     defaultVariants: {
