@@ -13,7 +13,7 @@ export default function MessagesLayout({ children }: { children: React.ReactNode
                 {children}
             </MainLayout>
 
-            <StickyPanel>
+            <StickyPanel variant={"message"}>
                 Components here
             </StickyPanel>
 
