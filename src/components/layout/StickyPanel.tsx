@@ -1,6 +1,6 @@
 export default function StickyPanel({ children }: { children: React.ReactNode }) {
     return (
-        <div className="hidden lg:block sticky top-0 h-screen">
+        <div className="hidden lg:block sticky top-0 h-screen bg-zinc-800">
             {/* Search bar */}
             <div className="bg-background border-b-1 border-background p-3 text-center">
                 {children}
