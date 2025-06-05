@@ -1,6 +1,29 @@
-export default function StickyPanel({ children }: { children: React.ReactNode }) {
+import { cva, type VariantProps } from 'class-variance-authority';
+import { cn } from '@/lib/utils';
+
+const stickyPanelVariants = cva(
+    'hidden lg:block sticky top-0 h-screen',
+    {
+        variants: {
+            variant:{
+                default: '',
+                message: 'border-r-1 border-zinc-700'
+            }
+        },
+        defaultVariants:{
+            variant: 'default'
+        }
+    }
+);
+
+interface StickyPanelProps extends React.HtmlHTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof stickyPanelVariants> {
+    children: React.ReactNode;
+}
+
+export default function StickyPanel({ children, variant, className, ...props }: StickyPanelProps) {
     return (
-        <div className="hidden lg:block sticky top-0 h-screen bg-zinc-800">
+        <div className={cn(stickyPanelVariants({ variant, className }))} {...props}>
             {/* Search bar */}
             <div className="bg-background border-b-1 border-background p-3 text-center">
                 {children}
