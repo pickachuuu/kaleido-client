@@ -13,8 +13,16 @@ export default function NotificationsLayout({
                 </div>
                 {children}
             </div>
-            <div className="hidden lg:block col-span-1">
-                Test
+            
+            <div className="hidden lg:block w-96 sticky top-0 h-screen">
+                {/* Search bar */}
+                <div className="bg-background border-b-1 border-background p-3 text-center">
+                    Search Bar here
+                </div>
+                {/* Scrollable content area */}
+                <div className="flex flex-col gap-2 p-4 h-[calc(100vh-64px)] overflow-y-auto">
+                
+                </div>
             </div>
         </div>
         )
