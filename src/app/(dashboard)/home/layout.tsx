@@ -20,7 +20,7 @@ export default function HomeLayout({
             </div>
             {/* right sidebar */}
             <div className="hidden lg:block col-span-1">
-            
+                Test
             </div>
         </div>
 
