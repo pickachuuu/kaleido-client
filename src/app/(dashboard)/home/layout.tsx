@@ -5,6 +5,7 @@ import TransparentHeader from "@/components/ui/TransparentHeader";
 import NavButton from "@/components/ui/NavButton";
 import StickyPanel from "@/components/layout/StickyPanel";
 import NavButtonContainer from "@/components/layout/NavButtonContainer";
+import ScrollableContent from "@/components/ui/ScrollableContent";
 
 export default function HomeLayout({
     children,
@@ -14,26 +15,14 @@ export default function HomeLayout({
     return (
         <LayoutContainer>
             <MainLayout>
-                <NavButtonContainer>
-                    <NavButton>
-                        For you
-                    </NavButton>
-                    <NavButton>
-                        Following
-                    </NavButton>
-                </NavButtonContainer>
-
                 {children}
             </MainLayout>
-            {/* Right sidebar */}
-            <div className="hidden lg:block w-96 sticky top-0 h-screen">
-                {/* Search bar */}
-                <div className="bg-background border-b-1 border-background p-3 text-center">
-                    Search Bar here
-                </div>
 
-                {/* Scrollable content area */}
-                <div className="flex flex-col gap-2 p-4 h-[calc(100vh-64px)] overflow-y-auto">
+            <StickyPanel>
+                    <div className="bg-background border-b-1 border-background p-3 text-center">
+                        Search Bar here
+                    </div>
+                <ScrollableContent>
                     <Card variant={"outline"} size={"auth"}>
                         <Card.Header className="text-2xl">
                             Relevant People
@@ -42,72 +31,8 @@ export default function HomeLayout({
                             Testing
                         </Card.Content>
                     </Card>
-
-                    <Card variant={"outline"} size={"auth"}>
-                        <Card.Header className="text-2xl">
-                            Relevant People
-                        </Card.Header>
-                        <Card.Content>
-                            Testing
-                        </Card.Content>
-                    </Card>
-
-                    <Card variant={"outline"} size={"auth"}>
-                        <Card.Header className="text-2xl">
-                            Relevant People
-                        </Card.Header>
-                        <Card.Content>
-                            Testing
-                        </Card.Content>
-                    </Card>
-
-                    <Card variant={"outline"} size={"auth"}>
-                        <Card.Header className="text-2xl">
-                            Relevant People
-                        </Card.Header>
-                        <Card.Content>
-                            Testing
-                        </Card.Content>
-                    </Card>
-
-                    <Card variant={"outline"} size={"auth"}>
-                        <Card.Header className="text-2xl">
-                            Relevant People
-                        </Card.Header>
-                        <Card.Content>
-                            Testing
-                        </Card.Content>
-                    </Card>
-
-                    <Card variant={"outline"} size={"auth"}>
-                        <Card.Header className="text-2xl">
-                            Relevant People
-                        </Card.Header>
-                        <Card.Content>
-                            Testing
-                        </Card.Content>
-                    </Card>
-
-                    <Card variant={"outline"} size={"auth"}>
-                        <Card.Header className="text-2xl">
-                            Relevant People
-                        </Card.Header>
-                        <Card.Content>
-                            Testing
-                        </Card.Content>
-                    </Card>
-
-                    <Card variant={"outline"} size={"auth"}>
-                        <Card.Header className="text-2xl">
-                            Relevant People
-                        </Card.Header>
-                        <Card.Content>
-                            Testing
-                        </Card.Content>
-                    </Card>                        
-                </div>
-            </div>
-
+                </ScrollableContent>
+            </StickyPanel>
         </LayoutContainer>
     )
 }
