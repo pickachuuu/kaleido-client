@@ -29,9 +29,7 @@ export default function MainLayout({
 }: MainLayoutProps) {
     return (
         <div className={cn(mainLayoutVariants({ variant, className }))} {...props}> 
-            <div className="col-span-3 bg-foreground/0 backdrop-blur-md p-3 sticky top-0 z-10">
                 {children}
-            </div>
         </div>
     );
 }
