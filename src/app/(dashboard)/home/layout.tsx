@@ -1,4 +1,10 @@
 import Card from "@/components/ui/Card";
+import MainLayout from "@/components/layout/MainLayout";
+import LayoutContainer from "@/components/layout/LayoutContainer";
+import TransparentHeader from "@/components/ui/TransparentHeader";
+import NavButton from "@/components/ui/NavButton";
+import StickyPanel from "@/components/layout/StickyPanel";
+import NavButtonContainer from "@/components/layout/NavButtonContainer";
 
 export default function HomeLayout({
     children,
@@ -6,22 +12,19 @@ export default function HomeLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="flex flex-col lg:flex-row min-h-screen">
-            {/* Main content column */}
-            <div className="flex-1 border-x-1 border-zinc-700"> 
-                <div className="bg-foreground/0 backdrop-blur-md sticky top-0 z-10">
-                    <div className="flex">
-                        <div className="flex-1 border-b-1 border-zinc-700 p-3 text-center hover:bg-zinc-900">
-                            For you
-                        </div>
-                        <div className="flex-1 border-b-1 border-zinc-700 p-3 text-center hover:bg-zinc-900">
-                            Following
-                        </div>
-                    </div>
-                </div>
-                {children}
-            </div>
+        <LayoutContainer>
+            <MainLayout>
+                <NavButtonContainer>
+                    <NavButton>
+                        For you
+                    </NavButton>
+                    <NavButton>
+                        Following
+                    </NavButton>
+                </NavButtonContainer>
 
+                {children}
+            </MainLayout>
             {/* Right sidebar */}
             <div className="hidden lg:block w-96 sticky top-0 h-screen">
                 {/* Search bar */}
@@ -104,6 +107,7 @@ export default function HomeLayout({
                     </Card>                        
                 </div>
             </div>
-        </div>
+
+        </LayoutContainer>
     )
 }
