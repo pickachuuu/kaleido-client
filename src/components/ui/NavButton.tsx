@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const navButtonVariants = cva(
-    'text-center p-3 bg-foreground/0 backdrop-blur-md hover:bg-zinc-900 sticky top-0 z-10',
+    'fomt-bold text-zinc-500 text-center p-3 bg-foreground/0 backdrop-blur-md hover:bg-zinc-900 sticky top-0 z-10',
     {
         variants:{
             variant:{
@@ -16,14 +16,18 @@ const navButtonVariants = cva(
 export interface NavButtonProps extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof navButtonVariants> {
         children: React.ReactNode;
+        active?: Boolean; 
 }
 
 
-export default function NavButton({ children, variant, className, ...props }: NavButtonProps) {
+export default function NavButton({ children, active, variant, className, ...props }: NavButtonProps) {
     return (
-        <div className={cn(navButtonVariants({ variant, className}))} {...props}>
+        <div className={cn(navButtonVariants({ variant, className}), active && 'text-foreground')} {...props}>
             {children}
-            <span className='absolute left-0 bottom-[-4px] h-0.5 rounded-xl bg-blue-950 duration-500 group-hover:w-full'></span>
+
+            <div className='flex justify-center items-center'>
+                <span className={cn('absolute  bottom-[0.5px] h-1 rounded-xl bg-blue-600 duration-500 text-center', active && 'w-16')}></span>
+            </div>
         </div>
     )
 }
