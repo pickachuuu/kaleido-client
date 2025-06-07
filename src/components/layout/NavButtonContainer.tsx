@@ -3,12 +3,12 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const navButtonContainerVariants = cva(
-    'grid border-b-1 border-zinc-700',
+    'flex h-13 z-50',
     {
         variants: {
             variant: {
-                default: 'grid-cols-2',
-                three: 'grid-cols-3'
+                default: '',
+                three: ''
             }
         },
         defaultVariants: {
