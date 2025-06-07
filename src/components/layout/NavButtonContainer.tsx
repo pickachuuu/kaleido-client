@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const navButtonContainerVariants = cva(
-    'grid bg-foreground/0 backdrop-blur-md sticky top-0 z-10',
+    'grid bg-foreground/0 backdrop-blur-md sticky top-0 z-10 border-b-1 border-zinc-700',
     {
         variants: {
             variant: {
