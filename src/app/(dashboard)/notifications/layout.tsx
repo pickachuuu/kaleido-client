@@ -1,7 +1,10 @@
 import LayoutContainer from "@/components/layout/LayoutContainer"
 import MainLayout from "@/components/layout/MainLayout"
 import StickyPanel from "@/components/layout/StickyPanel"
-import AllNotifs from "@/components/notification/AllNotifs"
+import Header from "@/components/ui/Header"
+import StickyContainer from "@/components/ui/StickyContainer"
+import SearchBar from "@/components/ui/SearchBar"
+import ScrollableContent from "@/components/ui/ScrollableContent"
 
 export default function NotificationsLayout({ 
     children }: { children: React.ReactNode 
@@ -14,8 +17,18 @@ export default function NotificationsLayout({
                     </MainLayout>
 
                     <StickyPanel>
-                        wie wie
+                        <StickyContainer variant={"solid"} className="">
+                            <Header>
+                                <SearchBar/>
+                            </Header>
+                        </StickyContainer>
+
+                        <ScrollableContent>
+                            Test
+                        </ScrollableContent>
+
                     </StickyPanel>
+
                 </LayoutContainer>
             </div>
         )
