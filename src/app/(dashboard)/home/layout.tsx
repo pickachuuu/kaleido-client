@@ -14,15 +14,15 @@ export default function HomeLayout({
 }) {
     return (
         <LayoutContainer>
+
             <MainLayout>
                 {children}
             </MainLayout>
 
             <StickyPanel>
-                    <div className="bg-background border-b-1 border-background p-3 text-center">
-                        Search Bar here
-                    </div>
+
                 <ScrollableContent>
+
                     <Card variant={"outline"} size={"auth"}>
                         <Card.Header className="text-2xl">
                             Relevant People
@@ -31,6 +31,7 @@ export default function HomeLayout({
                             Testing
                         </Card.Content>
                     </Card>
+
                 </ScrollableContent>
             </StickyPanel>
         </LayoutContainer>
