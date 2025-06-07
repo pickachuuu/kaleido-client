@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const navButtonVariants = cva(
-    'fomt-bold text-zinc-500 text-center p-3 bg-foreground/0 backdrop-blur-md hover:bg-zinc-900 sticky top-0 z-10',
+    'font-bold text-zinc-500 text-center p-3 hover:bg-zinc-900 sticky top-0 z-10',
     {
         variants:{
             variant:{
