@@ -1,107 +1,40 @@
 import Card from "../ui/Card"
 
+type Notifs = {
+    header: string;
+    body: string;
+}
+
+const NotifList: Notifs[] = [
+    {
+        header: "Live Now",
+        body: "Luna is live! Watch me eat"
+    },
+    {
+        header: "Derek Reposted",
+        body: "Gutoma oi"
+    },
+    {
+        header: "Kropek Request",
+        body: "Hatagi mi Kropek"
+    }
+]
+
 export default function AllNotifs(){
     return (
         <div>
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Message
-                </Card.Header>
-
-                <Card.Content>
-                    Luna: Uli namo!
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Kaon
-                </Card.Header>
-
-                <Card.Content>
-                    Snowy: Pakaona nako
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Message
-                </Card.Header>
-
-                <Card.Content>
-                    Luna: Uli namo!
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Kaon
-                </Card.Header>
-
-                <Card.Content>
-                    Snowy: Pakaona nako
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Message
-                </Card.Header>
-
-                <Card.Content>
-                    Luna: Uli namo!
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Kaon
-                </Card.Header>
-
-                <Card.Content>
-                    Snowy: Pakaona nako
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Message
-                </Card.Header>
-
-                <Card.Content>
-                    Luna: Uli namo!
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Kaon
-                </Card.Header>
-
-                <Card.Content>
-                    Snowy: Pakaona nako
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Message
-                </Card.Header>
-
-                <Card.Content>
-                    Luna: Uli namo!
-                </Card.Content>
-            </Card>
-
-            <Card variant={"notif"} size={"notif"} className="p-2">
-                <Card.Header>
-                    Kaon
-                </Card.Header>
-
-                <Card.Content>
-                    Snowy: Pakaona nako
-                </Card.Content>
-            </Card>            
+            {NotifList.map(( notif: Notifs, index: number) => {
+                return(
+                    <Card key={index} variant={"notif"} size={"notif"} className="p-4">
+                        <Card.Header>
+                            {notif.header}
+                        </Card.Header>
+                        <Card.Content>
+                            {notif.body}
+                        </Card.Content>
+                    </Card>
+                )
+            })}
         </div>
     )
 }
