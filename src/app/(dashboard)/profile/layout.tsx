@@ -1,7 +1,7 @@
 import MainLayout from "@/components/layout/MainLayout";
 import StickyPanel from "@/components/layout/StickyPanel";
 import LayoutContainer from "@/components/layout/LayoutContainer";
-import TransparentHeader from "@/components/ui/TransparentHeader";
+import TransparentHeader from "@/components/ui/Header";
 
 export default function ProfileLayout({ children }: { children: React.ReactNode }) {
     return (
