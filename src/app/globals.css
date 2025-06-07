@@ -32,7 +32,7 @@ body {
 
 /* For WebKit-based browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 8px;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
@@ -50,7 +50,6 @@ body {
 
 /* For Firefox */
 body {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+  scrollbar-width: none;
 }
 
