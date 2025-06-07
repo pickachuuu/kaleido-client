@@ -2,16 +2,18 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const CardVariants = cva(
-  'rounded-lg',
+  '',
   {
     variants: {
       variant: {
-        default: '',
+        default: 'rounded-lg',
         outline: 'border-1 border-zinc-700 p-2',
+        notif: 'border-b-1 border-zinc-700'
       },
       size: {
         default: 'w-82',
         auth: 'w-full',
+        notif: 'h-auto w-full',
         sm: 'h-54 w-64',
       },
     },
