@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const ScrollableContentVariants = cva(
-    'flex flex-col gap-2 p-4 h-[calc(100vh-64px)] overflow-y-auto',
+    'flex flex-col h-[calc(100vh-64px)] overflow-y-auto',
     {
         variants: {
             variant: {
