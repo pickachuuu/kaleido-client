@@ -7,9 +7,6 @@ export default function ExploreLayout({ children }: { children: React.ReactNode}
     return (
         <LayoutContainer>
             <MainLayout>
-                <TransparentHeader>
-                    Explore
-                </TransparentHeader>
                 {children}
             </MainLayout>
 
