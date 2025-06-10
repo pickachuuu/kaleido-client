@@ -9,9 +9,6 @@ export default function ProfileLayout({ children }: { children: React.ReactNode 
     return (
         <LayoutContainer>
             <MainLayout>
-                <TransparentHeader>
-                    Profile
-                </TransparentHeader>
                 {children}
             </MainLayout>
 
