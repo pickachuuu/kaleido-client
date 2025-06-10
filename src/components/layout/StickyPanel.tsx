@@ -23,13 +23,13 @@ interface StickyPanelProps extends React.HtmlHTMLAttributes<HTMLDivElement>,
 
 export default function StickyPanel({ children, variant, className, ...props }: StickyPanelProps) {
     return (
-        <div className={cn(stickyPanelVariants({ variant, className }))} {...props}>
+        <aside className={cn(stickyPanelVariants({ variant, className }))} {...props}>
             {/* Search bar */}
                 {children}
             {/* Scrollable content area */}
             {/* <div className="flex flex-col gap-2 p-4 h-[calc(100vh-64px)] overflow-y-auto">
         
             </div> */}
-        </div>
+        </aside>
     );
 }
