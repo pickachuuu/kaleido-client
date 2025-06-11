@@ -49,7 +49,7 @@ export default function AuthForm() {
 
                             <div className="text-bold text-white mt-12">
                                 Already have an account?
-                                <Button className="w-full my-2" variant="outline">
+                                <Button className="w-full my-2" variant="auth">
                                     Sign in
                                 </Button>
                             </div>
