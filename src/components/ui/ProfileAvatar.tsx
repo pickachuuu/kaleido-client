@@ -1,8 +1,9 @@
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
+import Image from "next/image"
 
 const ProfileAvatarVariant = cva(
-    'rounded-xl',
+    'relative bottom-20 h-36 w-36 rounded-full overflow-hidden border-5 border-background',
     {
         variants: {
             variant: {
@@ -17,17 +18,15 @@ const ProfileAvatarVariant = cva(
 
 export interface ProfileAvatarProps extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof ProfileAvatarVariant>{
-        children: React.ReactNode;
-        className: string;
+        className?: string;
+        profileUrl?: string;
 }
 
-import Image from "next/image"
-
-export default function ProfileAvatar(){
+export default function ProfileAvatar({ variant, className, profileUrl, ...props }: ProfileAvatarProps){
     return (
-        <div className="relative bottom-20 h-36 w-36 rounded-full overflow-hidden border-5 border-background">
+        <div className={cn(ProfileAvatarVariant({ className, variant, ...props }))} {...props}>
             <Image
-                src={"/profile/pikaProfile.jpg"}
+                src={profileUrl? profileUrl: "/"}
                 alt="temp"
                 fill={true}
             />
