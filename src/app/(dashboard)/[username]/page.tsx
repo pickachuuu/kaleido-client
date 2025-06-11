@@ -43,6 +43,37 @@ export default function ProfilePage({params}: ProfilePageProps) {
                     Likes
                 </NavButton>
             </NavButtonContainer>
+
+            <div>
+                {(() => { 
+                    switch(activeTab){
+                    case 'Post':
+                        return (
+                            <div>
+                                Post
+                            </div>
+                        )
+                    case 'Replies':
+                        return (
+                            <div>
+                                Replies
+                            </div>
+                        )
+                    case 'Likes':
+                        return(
+                            <div>
+                                Likes
+                            </div>
+                        )
+                    default:
+                        return (
+                            <div>
+                                Post
+                            </div>
+                        )
+                    }
+                })()}
+            </div>
         </div>
     )
 }
