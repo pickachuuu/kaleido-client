@@ -1,4 +1,4 @@
-export type profileProps = {
+export type ProfileType = {
     username: string;
     email: string;
     profileImage?: string;
