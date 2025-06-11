@@ -10,7 +10,8 @@ const buttonVariants = cva(
       variant: {
         default: 'bg-white text-black hover:bg-slate-200',
         secondary: 'bg-blue-500 text-white hover:bg-blue-600',
-        outline: 'border-1 border-slate-100 text-blue-500 hover:bg-blue-950',
+        auth: 'border-1 border-slate-100 text-blue-500 hover:bg-blue-950',
+        outline: 'border-1 border-zinc-600 text-foreground hover:bg-zinc-900',
         destructive: 'bg-red-600 text-white hover:bg-red-700',
       },
       size: {
