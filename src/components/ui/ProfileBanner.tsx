@@ -1,10 +1,14 @@
 import Image from "next/image"
 
-export default function ProfileBanner(){
+type ProfileBannerProps = {
+    bannerUrl?: string;
+}
+
+export default function ProfileBanner({ bannerUrl }: ProfileBannerProps){
     return (
         <div className="relative w-full h-56">
             <Image
-                src={"/profile/PikaBanner.jpg"}
+                src={bannerUrl? bannerUrl : "/"}
                 alt="Banner"
                 fill={true}
             />
