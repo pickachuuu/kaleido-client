@@ -22,7 +22,7 @@ export default function ProfilePage({params}: ProfilePageProps) {
         <div>
             <StickyContainer>
                 <Header>
-                    Profile
+                    {username}
                 </Header>
             </StickyContainer>
             <ProfileOverview/>
