@@ -5,7 +5,7 @@ import StickyContainer from "@/components/ui/StickyContainer"
 import ProfileOverview from "@/components/layout/ProfileOverview";
 import NavButtonContainer from "@/components/layout/NavButtonContainer";
 import NavButton from "@/components/ui/NavButton";
-import { use } from 'react'
+import { use, useState } from 'react'
 
 interface ProfilePageProps {
     params: Promise <{
@@ -15,6 +15,8 @@ interface ProfilePageProps {
 
 export default function ProfilePage({params}: ProfilePageProps) {
     const { username } = use(params);
+    const [activeTab, setActiveTab] = useState<'Post'|'Replies'|'Likes'>('Post')
+
 
     return (
         <div>
@@ -25,13 +27,19 @@ export default function ProfilePage({params}: ProfilePageProps) {
             </StickyContainer>
             <ProfileOverview/>
             <NavButtonContainer>
-                <NavButton>
+                <NavButton 
+                onClick={()=>{setActiveTab('Post')}}
+                active={activeTab === 'Post'}>
                     Post
                 </NavButton>
-                <NavButton>
+                <NavButton
+                onClick={()=>{setActiveTab('Replies')}}
+                active={activeTab === 'Replies'}>
                     Replies
                 </NavButton>
-                <NavButton>
+                <NavButton
+                onClick={()=>{setActiveTab('Likes')}}
+                active={activeTab === 'Likes'}>
                     Likes
                 </NavButton>
             </NavButtonContainer>
