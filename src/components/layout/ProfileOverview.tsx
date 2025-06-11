@@ -3,9 +3,9 @@ import { CalendarPlus } from "phosphor-react"
 import ProfileAvatar from "../ui/ProfileAvatar"
 import ProfileBanner from "../ui/ProfileBanner"
 import { Button } from "../ui/Button"
-import { profileProps } from "@/types/profileTypes"
+import { ProfileType } from "@/types/profileTypes"
 
-const user: profileProps = {
+const user: ProfileType = {
     username: "Pika",
     email: "Pika@gmail.com",
     bannerUrl: "/profile/PikaBanner.jpg",
