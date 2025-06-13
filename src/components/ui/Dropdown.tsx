@@ -63,7 +63,7 @@ export function DropdownTrigger({ children }: { children: React.ReactNode}){
 export function DropdownContent({ children }: {children: React.ReactNode}){
     const context = useContext(DropdownContext)
     if(!context) throw new Error("DropdownContent must be inside a dropdown component")
-    const { open, contentRef } = context
+    const { open, setOpen, contentRef } = context
 
     if (!open) return null
 
