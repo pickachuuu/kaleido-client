@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { sidebarNavItems } from "@/config/sidebar-cfg"
 import { Button } from '@/components/ui/Button'
 import { DotsThreeCircle, PlusCircle } from 'phosphor-react'
+import { Dropdown, DropdownTrigger, DropdownContent } from '../ui/Dropdown'
 
 
 export default function Sidebar() {
@@ -36,10 +37,19 @@ export default function Sidebar() {
                 })}
 
                 {/* More Button */}
-                <div className="flex items-center justify-center sm:justify-start gap-3 px-3 py-2 cursor-pointer hover:bg-zinc-900 rounded-3xl">
-                    <DotsThreeCircle size={32} color="#ffffff"/>
-                    <span className="hidden xl:inline text-xl">More</span>
-                </div>
+                <Dropdown>
+                    <DropdownTrigger>
+                        <div className="flex items-center justify-center sm:justify-start gap-3 px-3 py-2 cursor-pointer hover:bg-zinc-900 rounded-3xl">
+                            <DotsThreeCircle size={32} color="#ffffff"/>
+                            <span className="hidden xl:inline text-xl">More</span>
+                        </div>
+                    </DropdownTrigger>
+                        <DropdownContent>
+                            <div className="p-2 hover:bg-gray-100 cursor-pointer">Profile</div>
+                            <div className="p-2 hover:bg-gray-100 cursor-pointer">Settings</div>
+                            <div className="p-2 hover:bg-gray-100 cursor-pointer">Logout</div>
+                     </DropdownContent>
+                </Dropdown>
                 
                 {/* Post Button */}
                 <       div className='flex justify-center'>
