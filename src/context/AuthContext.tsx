@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { ProfileType } from "@/types/profileTypes";
+import { ProfileType } from "@/types/profile-types";
 import { AuthContextType, AuthState } from "@/types/authContextType";
 
 const AuthContext = createContext<AuthContextType | null>(null);
