@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { sidebarNavItems } from "@/config/sidebar-cfg"
 import { Button } from '@/components/ui/Button'
-import { DotsThreeCircle, PlusCircle } from 'phosphor-react'
+import { PlusCircle } from 'phosphor-react'
 import { Dropdown, DropdownTrigger, DropdownContent } from '../ui/Dropdown'
 
 
@@ -13,44 +13,74 @@ export default function Sidebar() {
     return (
         <aside className="w-16 xl:w-64 h-full p-4 flex items-center justify-center transition-all duration-300">
             <nav className="space-y-2 w-auto sm:w-48">
-                {sidebarNavItems.map((item) => {
+                {sidebarNavItems.map((item, index) => {
                     const isActive = pathname === item.href
 
                     return (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            className={cn(
-                                'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-zinc-900',
-                                isActive ? 'font-semibold' : 'font-light',
-                            )}
-                        >
-                            {item.icon && (
-                                <item.icon
-                                    size={32}
-                                    weight={isActive ? 'fill' : 'regular'}
-                                />
-                            )}
-                            <span className="hidden xl:inline text-xl">{item.title}</span>
-                        </Link>
+                        <div key={index}>
+                        {item.children && item.children.length > 0 ? (
+                            <Dropdown>
+                                <DropdownTrigger>
+                                <a
+                                    key={item.href}
+                                    className={cn(
+                                        'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-zinc-900',
+                                    )}
+                                >
+                                    {item.icon && (
+                                        <item.icon
+                                            size={32}
+                                            weight={isActive ? 'fill' : 'regular'}
+                                        />
+                                    )}
+                                <span className="hidden xl:inline text-xl">{item.title}</span>
+                                </a>
+                                </DropdownTrigger>
+                                <DropdownContent>
+                                    { item.children && item.children.map((child, index) => (
+                                    <Link
+                                        key={index}
+                                        href={child.href}
+                                        className={cn(
+                                            'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-zinc-900',
+                                            isActive ? 'font-semibold' : 'font-light',
+                                        )}
+                                    >
+                                        {item.icon && (
+                                            <item.icon
+                                                size={32}
+                                                weight={isActive ? 'fill' : 'regular'}
+                                            />
+                                        )}
+                                        <span className="hidden xl:inline text-xl">{child.title}</span>
+                                    </Link>
+                                    )) 
+                                    
+                                    }
+                                </DropdownContent>
+                            </Dropdown>
+                         ) : (
+                            <Link
+                                key={item.href}
+                                href={item.href}
+                                className={cn(
+                                    'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-zinc-900',
+                                    isActive ? 'font-semibold' : 'font-light',
+                                )}
+                            >
+                                {item.icon && (
+                                    <item.icon
+                                        size={32}
+                                        weight={isActive ? 'fill' : 'regular'}
+                                    />
+                                )}
+                                <span className="hidden xl:inline text-xl">{item.title}</span>
+                            </Link>
+                         )}
+                        </div>
                     )
                 })}
 
-                {/* More Button */}
-                <Dropdown>
-                    <DropdownTrigger>
-                        <div className="flex items-center justify-center sm:justify-start gap-3 px-3 py-2 cursor-pointer hover:bg-zinc-900 rounded-3xl">
-                            <DotsThreeCircle size={32} color="#ffffff"/>
-                            <span className="hidden xl:inline text-xl">More</span>
-                        </div>
-                    </DropdownTrigger>
-                        <DropdownContent>
-                            <div>
-                                
-                            </div>
-                     </DropdownContent>
-                </Dropdown>
-                
                 {/* Post Button */}
                 <       div className='flex justify-center'>
                     <Button onClick={() => alert('Create Post')} className="hidden xl:block 
