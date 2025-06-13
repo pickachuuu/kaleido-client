@@ -42,7 +42,7 @@ export default function Sidebar() {
                                         key={index}
                                         href={child.href}
                                         className={cn(
-                                            'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-zinc-900',
+                                            'flex items-center justify-center sm:justify-start gap-3 px-3 py-2 transition-colors hover:bg-zinc-900',
                                             isActive ? 'font-semibold' : 'font-light',
                                         )}
                                     >
