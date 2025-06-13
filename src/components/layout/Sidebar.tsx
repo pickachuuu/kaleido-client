@@ -45,9 +45,9 @@ export default function Sidebar() {
                         </div>
                     </DropdownTrigger>
                         <DropdownContent>
-                            <div className="p-2 hover:bg-gray-100 cursor-pointer">Profile</div>
-                            <div className="p-2 hover:bg-gray-100 cursor-pointer">Settings</div>
-                            <div className="p-2 hover:bg-gray-100 cursor-pointer">Logout</div>
+                            <div>
+                                
+                            </div>
                      </DropdownContent>
                 </Dropdown>
                 
