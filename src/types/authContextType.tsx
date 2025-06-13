@@ -1,4 +1,4 @@
-import { ProfileType } from "./profileTypes";
+import { ProfileType } from "./profile-types";
 
 export type AuthState = {
   isLoggedIn: boolean;
