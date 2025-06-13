@@ -1,4 +1,3 @@
-import { LucideIcon } from "lucide-react";
 import { IconProps }  from "phosphor-react";
 
 export interface SideBarItem {
