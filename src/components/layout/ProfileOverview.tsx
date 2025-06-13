@@ -3,7 +3,7 @@ import { CalendarPlus } from "phosphor-react"
 import ProfileAvatar from "../ui/ProfileAvatar"
 import ProfileBanner from "../ui/ProfileBanner"
 import { Button } from "../ui/Button"
-import { ProfileType } from "@/types/profileTypes"
+import { ProfileType } from "@/types/profile-types"
 
 const user: ProfileType = {
     username: "Pika",
