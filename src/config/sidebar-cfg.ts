@@ -28,3 +28,7 @@ export const sidebarNavItems: SideBarItem[] = [
     icon: User
   },
 ];
+
+export const dropdownItems: any = {
+
+}
