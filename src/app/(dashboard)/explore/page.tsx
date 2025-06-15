@@ -16,13 +16,36 @@ export default function ExplorePage() {
                     <SearchBar/>
                 </Header>
                 <NavButtonContainer>
-                    <NavButton active={activeTab === 'For you'}>For you</NavButton>
-                    <NavButton active={activeTab === 'Trending'}>Trending</NavButton>
-                    <NavButton active={activeTab === 'News'}>News</NavButton>
-                    <NavButton active={activeTab === 'Sports'}>Sports</NavButton>
-                    <NavButton active={activeTab === 'Entertainment'}>Entertainment</NavButton>
+                    <NavButton 
+                    onClick={()=>{setActiveTab('For you')}}
+                    active={activeTab === 'For you'}>For you</NavButton>
+                    <NavButton 
+                    onClick={()=>{setActiveTab('Trending')}}
+                    active={activeTab === 'Trending'}>Trending</NavButton>
+                    <NavButton 
+                    onClick={()=>{setActiveTab('News')}}
+                    active={activeTab === 'News'}>News</NavButton>
+                    <NavButton 
+                    onClick={()=>{setActiveTab('Sports')}}
+                    active={activeTab === 'Sports'}>Sports</NavButton>
+                    <NavButton 
+                    onClick={()=>{setActiveTab('Entertainment')}}
+                    active={activeTab === 'Entertainment'}>Entertainment</NavButton>
                 </NavButtonContainer>
             </StickyContainer>
+
+
+            <div>
+                {(()=>{
+                    switch (activeTab){
+                        case 'For you':
+                            return <>Test</>
+                        default:
+                            return <>Default</>
+                    }
+                })()}
+            </div>
+
         </div>
     )
 }
