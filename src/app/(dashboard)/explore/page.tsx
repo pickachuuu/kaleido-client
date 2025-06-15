@@ -40,6 +40,8 @@ export default function ExplorePage() {
                     switch (activeTab){
                         case 'For you':
                             return <>Test</>
+                        case 'Trending':
+                            return <>Trending</>
                         default:
                             return <>Default</>
                     }
