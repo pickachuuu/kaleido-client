@@ -42,6 +42,8 @@ export default function ExplorePage() {
                             return <>Test</>
                         case 'Trending':
                             return <>Trending</>
+                        case 'News':
+                            return <>News</>
                         default:
                             return <>Default</>
                     }
