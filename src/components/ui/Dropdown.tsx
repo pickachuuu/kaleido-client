@@ -70,7 +70,21 @@ export function DropdownContent({ children }: {children: React.ReactNode}){
     return (
         <div 
         ref={contentRef}
-        className="absolute top-95 z-50 min-w-72 w-auto rounded-lg shadow-[0_0_9px_0.5px] bg-background shadow-white/30">
+        className="fixed bottom-65 z-100 min-w-72 w-auto rounded-lg shadow-[0_0_9px_0.5px] bg-background shadow-white/30">
+            {children}
+        </div>
+    )
+}
+
+export function DropdownItem({children}: {children: React.ReactNode}){
+    const context = useContext(DropdownContext)
+    if(!context) throw new Error("DropdownContent must be inside a dropdown component")
+    const { open, setOpen, contentRef } = context
+
+    return (
+        <div
+        onClick={()=>{setOpen(!open)}}
+        >
             {children}
         </div>
     )
