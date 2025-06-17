@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils'
 import { sidebarNavItems } from "@/config/sidebar-cfg"
 import { Button } from '@/components/ui/Button'
 import { PlusCircle } from 'phosphor-react'
-import { Dropdown, DropdownTrigger, DropdownContent } from '../ui/Dropdown'
+import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from '../ui/Dropdown'
 
 
 export default function Sidebar() {
@@ -36,7 +36,9 @@ export default function Sidebar() {
                                 <span className="hidden xl:inline text-xl">{item.title}</span>
                                 </a>
                                 </DropdownTrigger>
+                                
                                 <DropdownContent>
+                                    <DropdownItem>
                                     { item.children && item.children.map((child, index) => (
                                     <Link
                                         key={index}
@@ -57,6 +59,7 @@ export default function Sidebar() {
                                     )) 
                                     
                                     }
+                                    </DropdownItem>
                                 </DropdownContent>
                             </Dropdown>
                          ) : (
