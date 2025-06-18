@@ -1,6 +1,7 @@
 import StickyContainer from "@/components/ui/StickyContainer"
 import Header from "@/components/ui/Header"
 import SearchBar from "@/components/ui/SearchBar"
+import ChatCard from "@/components/ui/ChatCard"
 
 export default function MessagesPage() {
     return (
@@ -10,9 +11,12 @@ export default function MessagesPage() {
                     Messages
                 </Header>
                 <Header className="px-5 py-1">
-                    <SearchBar/>
+                <SearchBar/>
                 </Header>
             </StickyContainer>
+
+
+
 
         </div>
     )
