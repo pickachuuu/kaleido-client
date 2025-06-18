@@ -54,6 +54,7 @@ export function DropdownTrigger({ children }: { children: React.ReactNode}){
         <div 
         ref={triggerRef}
         onClick={()=>{setOpen(!open)}}      
+        className="relative"
         >
             {children}
         </div>
@@ -70,7 +71,7 @@ export function DropdownContent({ children }: {children: React.ReactNode}){
     return (
         <div 
         ref={contentRef}
-        className="fixed bottom-65 z-100 min-w-72 w-auto rounded-lg shadow-[0_0_9px_0.5px] bg-background shadow-white/30">
+        className="absolute -translate-y-35 z-50 min-w-72 w-auto rounded-lg shadow-[0_0_9px_0.5px] bg-background shadow-white/30">
             {children}
         </div>
     )
