@@ -3,13 +3,13 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const StickyContainerVariants = cva(
-    'sticky top-0 z-30 cursor-pointer',
+    'sticky top-0 z-10 cursor-pointer',
     {
         variants: {
             variant: {
                 solid: 'bg-background',
                 transparent: 'bg-foreground/0 backdrop-blur-xl'
-            }
+            }   
         },
         defaultVariants: {
             variant: 'transparent'
