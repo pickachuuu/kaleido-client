@@ -8,7 +8,7 @@ const ProfileAvatarVariant = cva(
         variants: {
             variant: {
                 default: 'bottom-20 h-32 w-32 border-5 border-background',
-                chat: 'top-1 h-12 w-12'
+                chat: 'h-12 w-12'
             }
         },
         defaultVariants:{
