@@ -8,7 +8,7 @@ const ChatCardVariants = cva(
         variants: {
             variant: { 
                 default: 'bg-background',
-                active: 'bg-zinc-900'
+                active: 'bg-zinc-900 border-r-2 border-blue-600'
             },
         },
         defaultVariants: {
@@ -35,7 +35,7 @@ function ChatCard({ children, className, variant, ...props }: ChatCardProps){
     )
 }
 
-ChatCard.Content = function ChatCardHeader({ className, ...props}: ChatCardContentProps){
+ChatCard.Content = function ChatCardHeader({ className }: ChatCardContentProps){
     return (
     <div className='flex'>
         <div className='sticky top-0'>
