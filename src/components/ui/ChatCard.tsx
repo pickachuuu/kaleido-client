@@ -3,11 +3,11 @@ import { cn } from '@/lib/utils';
 import ProfileAvatar from './ProfileAvatar';
 
 const ChatCardVariants = cva(
-    'bg-background w-full min-h-24 p-3',
+    'bg-background w-full min-h-16 p-3',
     {
         variants: {
             variant: { 
-                default: 'hover:bg-zinc-700'
+                default: 'hover:bg-gray-900'
             }
         },
         defaultVariants: {
@@ -37,20 +37,19 @@ function ChatCard({ children, active, className, variant, ...props }: ChatCardPr
 
 ChatCard.Content = function ChatCardHeader({ className, ...props}: ChatCardContentProps){
     return (
-    <div>
-        <div className='grid grid-cols-5'>
-            <div className='flex items-center gap-4'>
-            <div className='col-span-1'>
-                <ProfileAvatar variant={'chat'} profileUrl='/images/Logo/kaleido.png'/>
-            </div>
-            <div className='col-span-3'>
-                Kaleido
-            </div>
+    <div className='flex'>
+        <div className='sticky top-0'>
+            <ProfileAvatar variant={'chat'} profileUrl='/images/Logo/kaleido.png'/>
+        </div>
+        <div className='flex flex-col'>
+            <div className='mx-2'>
+                <span className='mr-2 font-bold'>Kaleido</span>
+                <span className='text-zinc-500'>@kaleido</span>
             </div>
 
-        </div>
-        <div>
-            You: Join us fr!
+            <div className='mx-2'>
+                <span className='text-zinc-500'>Hawuuu</span>
+            </div>
         </div>
     </div>
     )
