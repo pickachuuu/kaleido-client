@@ -15,9 +15,9 @@ export default function MessagesPage() {
                 </Header>
             </StickyContainer>
 
-
-
-
+            <ChatCard active={true}>
+                <ChatCard.Content/>
+            </ChatCard>
         </div>
     )
 }
