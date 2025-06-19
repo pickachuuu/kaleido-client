@@ -3,15 +3,16 @@ import { cn } from '@/lib/utils';
 import ProfileAvatar from './ProfileAvatar';
 
 const ChatCardVariants = cva(
-    'bg-background w-full min-h-16 p-3',
+    'w-full min-h-16 p-3 hover:bg-zinc-900',
     {
         variants: {
             variant: { 
-                default: 'hover:bg-zinc-900'
-            }
+                default: 'bg-background',
+                active: 'bg-zinc-950'
+            },
         },
         defaultVariants: {
-            variant: 'default'
+            variant: 'default',
         }
     }
 )
@@ -20,14 +21,13 @@ interface ChatCardProps extends React.HtmlHTMLAttributes<HTMLDivElement>,
     VariantProps<typeof ChatCardVariants>{
         children: React.ReactNode
         className?: string
-        active: boolean
-    }
+}
 
 interface ChatCardContentProps extends React.HTMLAttributes<HTMLDivElement>{
     className?: string
 }
 
-function ChatCard({ children, active, className, variant, ...props }: ChatCardProps){
+function ChatCard({ children, className, variant, ...props }: ChatCardProps){
     return (
         <div className={cn(ChatCardVariants({ className, variant }))} {...props}>
             {children}
