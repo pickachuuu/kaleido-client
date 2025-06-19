@@ -7,7 +7,7 @@ const ChatCardVariants = cva(
     {
         variants: {
             variant: { 
-                default: 'hover:bg-gray-900'
+                default: 'hover:bg-zinc-900'
             }
         },
         defaultVariants: {
