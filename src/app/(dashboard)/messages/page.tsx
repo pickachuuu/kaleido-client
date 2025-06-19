@@ -7,7 +7,7 @@ export default function MessagesPage() {
     return (
         <div>
             <StickyContainer>
-                <Header className="px-5 py-2">
+                <Header className="px-5 py-2 bg-">
                     Messages
                 </Header>
                 <Header className="px-5 py-1">
@@ -15,9 +15,9 @@ export default function MessagesPage() {
                 </Header>
             </StickyContainer>
 
-            <ChatCard variant={'active'}>
+            <ChatCard>
                 <ChatCard.Content/>
-            </ChatCard>
+            </ChatCard> 
         </div>
     )
 }
