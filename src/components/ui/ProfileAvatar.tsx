@@ -3,11 +3,12 @@ import { cn } from "@/lib/utils"
 import Image from "next/image"
 
 const ProfileAvatarVariant = cva(
-    'relative bottom-20 h-36 w-36 rounded-full overflow-hidden border-5 border-background',
+    'relative rounded-full overflow-hidden ',
     {
         variants: {
             variant: {
-                default: 'h-32 w-32'
+                default: 'bottom-20 h-32 w-32 border-5 border-background',
+                chat: 'top-1 h-12 w-12'
             }
         },
         defaultVariants:{
