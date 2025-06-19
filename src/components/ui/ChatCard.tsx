@@ -39,12 +39,15 @@ ChatCard.Content = function ChatCardHeader({ className, ...props}: ChatCardConte
     return (
     <div>
         <div className='grid grid-cols-5'>
-            <div className='col-span-2'>
-                <ProfileAvatar profileUrl='/images/Logo/kaleido.png'/>
+            <div className='flex items-center gap-4'>
+            <div className='col-span-1'>
+                <ProfileAvatar variant={'chat'} profileUrl='/images/Logo/kaleido.png'/>
             </div>
             <div className='col-span-3'>
                 Kaleido
             </div>
+            </div>
+
         </div>
         <div>
             You: Join us fr!
