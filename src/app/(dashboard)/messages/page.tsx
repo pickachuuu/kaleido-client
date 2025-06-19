@@ -17,6 +17,10 @@ export default function MessagesPage() {
 
             <ChatCard>
                 <ChatCard.Content/>
+            </ChatCard>
+
+            <ChatCard variant={'default'}>
+                <ChatCard.Content/>
             </ChatCard> 
         </div>
     )
