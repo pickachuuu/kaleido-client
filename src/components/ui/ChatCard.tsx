@@ -1,5 +1,6 @@
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import ProfileAvatar from './ProfileAvatar';
 
 const ChatCardVariants = cva(
     'bg-background w-full min-h-24 p-3',
@@ -22,7 +23,11 @@ interface ChatCardProps extends React.HtmlHTMLAttributes<HTMLDivElement>,
         active: boolean
     }
 
-export default function ChatCard({ children, active, className, variant, ...props }: ChatCardProps){
+interface ChatCardContentProps extends React.HTMLAttributes<HTMLDivElement>{
+    className?: string
+}
+
+function ChatCard({ children, active, className, variant, ...props }: ChatCardProps){
     return (
         <div className={cn(ChatCardVariants({ className, variant }))} {...props}>
             {children}
@@ -30,21 +35,22 @@ export default function ChatCard({ children, active, className, variant, ...prop
     )
 }
 
-ChatCard.Content = function ChatCardHeader({ children, active, className, variant, ...props}: ChatCardProps){
+ChatCard.Content = function ChatCardHeader({ className, ...props}: ChatCardContentProps){
     return (
-        <div>
-            <div className='grid grid-cols-5'>
-                <div className='col-span-2'>
-                    Profile
-                </div>
-
-                <div className='col-span-3'>
-                    Icon
-                </div>
+    <div>
+        <div className='grid grid-cols-5'>
+            <div className='col-span-2'>
+                <ProfileAvatar profileUrl='/images/Logo/kaleido.png'/>
             </div>
-            <div>
-                test test
+            <div className='col-span-3'>
+                Kaleido
             </div>
         </div>
+        <div>
+            You: Join us fr!
+        </div>
+    </div>
     )
 }
+
+export default ChatCard;
