@@ -3,16 +3,16 @@ import { cn } from '@/lib/utils';
 import ProfileAvatar from './ProfileAvatar';
 
 const ChatCardVariants = cva(
-    'w-full min-h-16 p-3 hover:bg-zinc-900',
+    'w-full min-h-16 p-3 transform transition-colors duration-200 hover:bg-neutral-900',
     {
         variants: {
             variant: { 
                 default: 'bg-background',
-                active: 'bg-zinc-950'
+                active: 'bg-zinc-900'
             },
         },
         defaultVariants: {
-            variant: 'default',
+            variant: 'active',
         }
     }
 )
