@@ -1,3 +1,5 @@
+'use client'
+
 import MainLayout from "@/components/layout/MainLayout";
 import StickyPanel from "@/components/layout/StickyPanel";
 import LayoutContainer from "@/components/layout/LayoutContainer";
@@ -5,7 +7,11 @@ import StickyContainer from "@/components/ui/StickyContainer";
 import Header from "@/components/ui/Header";
 import { ChatContext, ChatProvider } from "@/context/ChatContext";
 
+// testing
+import { useAuth } from "@/context/AuthContext";
+
 export default function MessagesLayout({ children }: { children: React.ReactNode }) {
+    const {user} = useAuth()
     return (
         <ChatProvider>
             <LayoutContainer variant={"message"}>
@@ -17,7 +23,7 @@ export default function MessagesLayout({ children }: { children: React.ReactNode
                     <StickyContainer className="px-5 py-2">
                         <Header className="flex justify-between bg-red-300">
                             <div>
-                                Messages
+                                {user?.username}
                             </div>
                             <div>
                                 icon
