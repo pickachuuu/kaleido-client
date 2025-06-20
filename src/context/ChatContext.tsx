@@ -1,3 +1,5 @@
+'use client'
+
 import { createContext, useState, useContext } from "react";
 import { ChatContextType } from "@/types/ChatContextType";
 import { messageType } from "@/types/message-types";
