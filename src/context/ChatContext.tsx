@@ -4,7 +4,7 @@ import { messageType } from "@/types/message-types";
 
 export const ChatContext = createContext<ChatContextType | undefined >(undefined);
 
-export const chatProvider = ({children}:{children: React.ReactNode}) => {
+export const ChatProvider = ({children}:{children: React.ReactNode}) => {
     const [selectedConversationId, setSelectedConversationId] = useState<string | null>(null)
     const [messages, setMessages] = useState<messageType[]>([])
 
