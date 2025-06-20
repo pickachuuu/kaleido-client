@@ -1,27 +1,32 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { type NextRequest } from 'next/server'
+import { updateSession } from '@/utils/supabase/middleware'
 
-export function middleware(request: NextRequest) {
-  const isAuthenticated = true // Replace with your auth check
+export const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!
+export const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 
-  // Redirect root to appropriate page
-  if (request.nextUrl.pathname === '/') {
-    return NextResponse.redirect(new URL(isAuthenticated ? '/home' : '/auth', request.url))
-  }
-
-  // Protect /home route
-  if (!isAuthenticated && request.nextUrl.pathname.startsWith('/home')) {
-    return NextResponse.redirect(new URL('/auth', request.url))
-  }
-
-  // Redirect authenticated users away from login
-  if (isAuthenticated && request.nextUrl.pathname === '/login') {
-    return NextResponse.redirect(new URL('/home', request.url))
-  }
-
-  return NextResponse.next()
+export async function middleware(request: NextRequest) {
+console.log("URL:", supabaseUrl);
+console.log("KEY:", supabaseKey?.slice(0, 10)); // Don't print full key in prod
+  return await updateSession(request, supabaseUrl, supabaseKey)
+  
 }
 
+
+
+
 export const config = {
-  matcher: ['/', '/home/:path*', '/login']
+  matcher: [
+    /*
+     * Match all request paths except for the ones starting with:
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * Feel free to modify this pattern to include more paths.
+     */
+    '/home',
+    '/messages',
+    '/notifications',
+    '/test',
+    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+  ],
 }
