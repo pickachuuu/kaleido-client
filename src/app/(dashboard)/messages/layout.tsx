@@ -3,12 +3,11 @@ import StickyPanel from "@/components/layout/StickyPanel";
 import LayoutContainer from "@/components/layout/LayoutContainer";
 import StickyContainer from "@/components/ui/StickyContainer";
 import Header from "@/components/ui/Header";
-import { ChatContext } from "@/context/ChatContext";
-import { dummyProfile } from "@/lib/dummyUser";
+import { ChatContext, ChatProvider } from "@/context/ChatContext";
 
 export default function MessagesLayout({ children }: { children: React.ReactNode }) {
     return (
-        <ChatContext.Provider>
+        <ChatProvider>
             <LayoutContainer variant={"message"}>
                 <MainLayout variant={"message"}>
                     {children}
@@ -27,6 +26,6 @@ export default function MessagesLayout({ children }: { children: React.ReactNode
                     </StickyContainer>
                 </StickyPanel>
             </LayoutContainer>
-        </ChatContext.Provider>
+        </ChatProvider>
     );
 }
