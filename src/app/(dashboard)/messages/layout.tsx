@@ -13,8 +13,13 @@ export default function MessagesLayout({ children }: { children: React.ReactNode
 
             <StickyPanel variant={"message"}>
                 <StickyContainer className="px-5 py-2">
-                    <Header>
-                        Username
+                    <Header className="flex justify-between bg-red-300">
+                        <div>
+                            Messages
+                        </div>
+                        <div>
+                            icon
+                        </div>
                     </Header>
                 </StickyContainer>
             </StickyPanel>
