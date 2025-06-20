@@ -1,4 +1,6 @@
-import { createContext, useContext, useReducer } from "react";
+'use client';
+
+import { createContext, useContext, useReducer, useEffect } from "react";
 import { ProfileType } from "@/types/profile-types";
 import { AuthContextType, AuthState } from "@/types/authContextType";
 import { dummyProfile } from "@/lib/dummyUser";
@@ -55,9 +57,19 @@ const AuthContext = createContext<AuthContextType | null>(null);
 export const AuthProvider = ({children}:{children: React.ReactNode}) => {
     const [state, dispatch] = useReducer(authReducer, initialState);
 
+    useEffect(() => {
+        const storedUser = localStorage.getItem("user");
+        if (storedUser) {
+            dispatch({ type: "LOGIN", payload: JSON.parse(storedUser) });
+        }
+    }, []);
+
+
     const login = (userData: ProfileType ) => {
         dispatch({type: "SET_LOADING", payload: true})
         dispatch({type: "LOGIN", payload: dummyProfile})
+        localStorage.setItem("user", JSON.stringify(userData));
+        console.log(userData)
     };
 
     const logout = () => {
