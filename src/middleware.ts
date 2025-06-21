@@ -26,7 +26,7 @@ export const config = {
     '/home',
     '/messages',
     '/notifications',
-    '/test',
+    '/settings',
     '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 }
