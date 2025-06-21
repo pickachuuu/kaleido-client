@@ -20,7 +20,7 @@ export default function AuthCallbackPage() {
       }
 
       if (data?.session) {
-        router.push('/home'); // ✅ Successful login — go to protected route
+        router.push('/home'); // Successful login — go to protected route
       }
     };
 
