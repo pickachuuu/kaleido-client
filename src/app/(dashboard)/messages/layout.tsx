@@ -21,7 +21,7 @@ export default function MessagesLayout({ children }: { children: React.ReactNode
 
                 <StickyPanel variant={"message"}>
                     <StickyContainer className="px-5 py-2">
-                        <Header className="flex justify-between bg-red-300">
+                        <Header className="flex justify-between">
                             <div>
                                 {user?.username}
                             </div>
