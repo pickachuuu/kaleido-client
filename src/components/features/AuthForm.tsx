@@ -1,11 +1,8 @@
-'use client';
 import Card from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { useAuth } from "@/context/AuthContext";
-import { dummyProfile } from "@/lib/dummyUser";
+import { handleGithubLogin } from "@/hooks/useAuthActions";
 
 export default function AuthForm() {
-    const {login} = useAuth()
     return (
         <div className="flex items-center justify-center">
             <Card size={"auth"}>
@@ -27,9 +24,7 @@ export default function AuthForm() {
                                 </Button>
                             </div>
                             <div>
-                                <Button className="w-full my-2" startIcon="/images/Logo/github.png" onClick={() => {
-                                    login(dummyProfile)
-                                    window.location.href = '/home'} }>
+                                <Button className="w-full my-2" startIcon="/images/Logo/github.png" onClick={handleGithubLogin}>
                                     Sign in with Github
                                 </Button>
                             </div>
