@@ -1,8 +1,18 @@
-// import { supabase } from "@/lib/supabase";
+'use client';
 
-// export const useAuthActions = () => {
-//   const login = () => supabase.auth.signInWithOAuth({ provider: "google" });
-//   const logout = () => supabase.auth.signOut();
+import { createClient } from '@/utils/supabase/client';
 
-//   return { login, logout };
-// };
+const supabase = createClient();
+
+export async function handleGithubLogin() {
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: 'github',
+    options: {
+      redirectTo: 'http://localhost:3000/auth/callback',
+    },
+  });
+
+  if (error) {
+    console.error('OAuth error:', error.message);
+  }
+}
