@@ -5,9 +5,11 @@ import Card from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { handleGithubLogin } from "@/hooks/useAuthActions";
 import LoginModal from "@/components/modal/LoginModal";
+import RegisterModal from "@/components/modal/RegisterModal";
 
 export default function AuthForm() {
     const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+    const [isRegisterModalOpen, setIsRegisterModalOpen] = useState(false);
 
     const handleSignInClick = () => {
         setIsLoginModalOpen(true);
@@ -15,6 +17,14 @@ export default function AuthForm() {
 
     const handleCloseLoginModal = () => {
         setIsLoginModalOpen(false);
+    };
+
+    const handleCreateAccountClick = () => {
+        setIsRegisterModalOpen(true);
+    };
+
+    const handleCloseRegisterModal = () => {
+        setIsRegisterModalOpen(false);
     };
 
     return (
@@ -51,7 +61,11 @@ export default function AuthForm() {
                                 </div>
 
                                 <div>
-                                    <Button className="w-full my-2" variant="secondary">
+                                    <Button 
+                                        className="w-full my-2" 
+                                        variant="secondary"
+                                        onClick={handleCreateAccountClick}
+                                    >
                                         Create an account
                                     </Button>
                                 </div>
@@ -86,6 +100,12 @@ export default function AuthForm() {
             <LoginModal 
                 isOpen={isLoginModalOpen} 
                 onClose={handleCloseLoginModal} 
+            />
+
+            {/* Register Modal */}
+            <RegisterModal 
+                isOpen={isRegisterModalOpen} 
+                onClose={handleCloseRegisterModal} 
             />
         </>
     )
