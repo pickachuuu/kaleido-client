@@ -5,6 +5,7 @@ import NavButtonContainer from "@/components/layout/NavButtonContainer";
 import ForYouFeed from "@/components/feeds/ForYouFeed";
 import FollowingFeed from "@/components/feeds/FollowingFeed";
 import StickyContainer from "@/components/ui/StickyContainer";
+import LoginModal from "@/components/modal/LoginModal";
 import { useState } from "react";
 
 export default function Home() {
@@ -12,7 +13,7 @@ export default function Home() {
 
     return (
         <div>
-            
+            <LoginModal/>
             <StickyContainer>
                 <NavButtonContainer>
                     <NavButton 
