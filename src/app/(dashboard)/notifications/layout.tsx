@@ -10,26 +10,10 @@ export default function NotificationsLayout({
     children }: { children: React.ReactNode 
     }){
         return (
-            <div>
-                <LayoutContainer>
-                    <MainLayout>
-                        {children}
-                    </MainLayout>
-
-                    <StickyPanel>
-                        <StickyContainer variant={"solid"} className="">
-                            <Header>
-                                <SearchBar/>
-                            </Header>
-                        </StickyContainer>
-
-                        <ScrollableContent>
-                            Test
-                        </ScrollableContent>
-
-                    </StickyPanel>
-
-                </LayoutContainer>
-            </div>
+            <LayoutContainer>
+                <MainLayout>
+                    {children}
+                </MainLayout>
+            </LayoutContainer>
         )
     }

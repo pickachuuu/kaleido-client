@@ -9,10 +9,6 @@ export default function ExploreLayout({ children }: { children: React.ReactNode}
             <MainLayout>
                 {children}
             </MainLayout>
-
-            <StickyPanel>
-                Components here
-            </StickyPanel>
         </LayoutContainer>
     )
 }

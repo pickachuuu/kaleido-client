@@ -8,10 +8,6 @@ export default function ProfileLayout({ children }: { children: React.ReactNode 
             <MainLayout>
                 {children}
             </MainLayout>
-
-            <StickyPanel>
-                Components here
-            </StickyPanel>
         </LayoutContainer>
     )
 }

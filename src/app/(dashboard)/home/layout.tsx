@@ -19,28 +19,7 @@ export default function HomeLayout({
                 {children}
             </MainLayout>
 
-            <StickyPanel>
-                <ScrollableContent>
-                    <StickyContainer>
 
-                <Header>
-                        <SearchBar/>
-                </Header>
-                    </StickyContainer>
-
-                    <div className="flex-row">
-                        <div className="flex-1 h-96">
-                            test
-                        </div>
-                        <div className="flex-1 h-96">
-                            test
-                        </div>
-                        <div className="flex-1 h-96">
-                            test
-                        </div>
-                    </div>
-                </ScrollableContent>
-            </StickyPanel>
         </LayoutContainer>
     )
 }
