@@ -23,10 +23,10 @@ export default function MessagesLayout({ children }: { children: React.ReactNode
                     <StickyContainer className="px-5 py-2">
                         <Header className="flex justify-between">
                             <div>
-                                {user?.username}
+                                {/* {user?.username} */}
                             </div>
                             <div>
-                                icon
+                                {/* icon */}
                             </div>
                         </Header>
                     </StickyContainer>
