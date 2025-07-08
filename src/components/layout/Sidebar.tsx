@@ -6,6 +6,7 @@ import { sidebarNavItems } from "@/config/sidebar-cfg"
 import { Button } from '@/components/ui/Button'
 import { PlusCircle } from 'phosphor-react'
 import { Dropdown, DropdownTrigger, DropdownContent, DropdownItem } from '../ui/Dropdown'
+import Image from 'next/image'
 
 
 export default function Sidebar() {
@@ -13,6 +14,17 @@ export default function Sidebar() {
     return (
         <aside className="w-16 xl:w-64 h-full p-4 flex items-center justify-center transition-all duration-300">
             <nav className="space-y-2 w-auto sm:w-48">
+
+                <div className='flex justify-center'>
+                    <Image
+                    src={'/images/logo/kaleido.png'}
+                    alt='KaleidoLogo.png'
+                    width={84}
+                    height={84}
+                    />
+                </div>
+                      
+
                 {sidebarNavItems.map((item, index) => {
                     const isActive = pathname === item.href
 
