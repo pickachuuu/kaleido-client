@@ -19,8 +19,8 @@ export default function Sidebar() {
                     <Image
                     src={'/images/logo/kaleido.png'}
                     alt='KaleidoLogo.png'
-                    width={84}
-                    height={84}
+                    width={74}
+                    height={74}
                     />
                 </div>
                       
