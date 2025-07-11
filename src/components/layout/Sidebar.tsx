@@ -15,7 +15,7 @@ export default function Sidebar() {
         <aside className="w-16 xl:w-64 h-full p-4 flex items-center justify-center transition-all duration-300">
             <nav className="space-y-2 w-auto sm:w-48">
 
-                <div className='flex justify-center'>
+                <div className='px-4'>
                     <Image
                     src={'/images/logo/kaleido.png'}
                     alt='KaleidoLogo.png'
