@@ -3,12 +3,12 @@ import { cn } from '@/lib/utils';
 import ProfileAvatar from './ProfileAvatar';
 
 const ChatCardVariants = cva(
-    'w-full min-h-16 p-3 transform transition-colors duration-200 hover:bg-neutral-900',
+    'w-full min-h-16 p-3 transform transition-colors duration-200 hover:bg-[var(--highlight)]',
     {
         variants: {
             variant: { 
-                default: 'bg-background',
-                active: 'bg-zinc-900 border-r-2 border-blue-600'
+                default: 'bg-[var(--background)]',
+                active: 'bg-[var(--accent-secondary)] border-r-2 border-[var(--accent)]',
             },
         },
         defaultVariants: {
@@ -43,12 +43,12 @@ ChatCard.Content = function ChatCardHeader({ className }: ChatCardContentProps){
         </div>
         <div className='flex flex-col'>
             <div className='mx-2'>
-                <span className='mr-2 font-bold'>Kaleido</span>
-                <span className='text-zinc-500'>@kaleido</span>
+                <span className='mr-2 font-bold text-[var(--accent)]'>Kaleido</span>
+                <span className='text-[var(--accent-secondary)]'>@kaleido</span>
             </div>
 
             <div className='mx-2'>
-                <span className='text-zinc-500'>Hawuuu</span>
+                <span className='text-[var(--accent-secondary)]'>Hawuuu</span>
             </div>
         </div>
     </div>
