@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const HeaderVariants = cva(
-    'h-13',
+    'h-13 text-xl font-bold',
     {
         variants: {
             variant: {
@@ -26,9 +26,7 @@ interface HeaderProps extends React.HTMLAttributes<HTMLDivElement>,
 export default function Header({ children, variant, className, ...props }: HeaderProps ){
     return (
         <div className={cn(HeaderVariants({ variant, className }))} {...props}>
-            <h1 className="text-xl font-bold">
-                {children}
-            </h1>
+            {children}
         </div>
     )
 }
