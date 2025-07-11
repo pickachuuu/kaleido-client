@@ -6,9 +6,7 @@ import LayoutContainer from "@/components/layout/LayoutContainer";
 import StickyContainer from "@/components/ui/StickyContainer";
 import Header from "@/components/ui/Header";
 import { ChatContext, ChatProvider } from "@/context/ChatContext";
-
-// testing
-import { useAuth } from "@/context/AuthContext";
+import { Info } from "phosphor-react";
 
 export default function MessagesLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -19,14 +17,21 @@ export default function MessagesLayout({ children }: { children: React.ReactNode
                 </MainLayout>
 
                 <StickyPanel variant={"message"}>
-                    <StickyContainer className="px-5 py-2">
+                    <StickyContainer className="px-5 py-2 w-full">
                         <Header className="flex justify-between">
-                            <div>
-                                {/* {user?.username} */}
+                            <div className="flex gap-4">
+                                <div>
+                                    Avatar
+                                </div>
+                                <div>
+                                    Icon
+                                </div>
                             </div>
-                            <div>
-                                {/* icon */}
+
+                            <div className="flex">
+                                <Info/>
                             </div>
+
                         </Header>
                     </StickyContainer>
                 </StickyPanel>
