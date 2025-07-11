@@ -1,5 +1,5 @@
 import { SideBarItem } from '@/types/nav-types';
-import { House, Binoculars, Bell, ChatCenteredText, User, DotsThreeCircle } from 'phosphor-react'
+import { House, Binoculars, Bell, ChatCenteredText, User, DotsThreeCircle, Gear } from 'phosphor-react'
 
 export const sidebarNavItems: SideBarItem[] = [
   {
@@ -28,27 +28,32 @@ export const sidebarNavItems: SideBarItem[] = [
     icon: User
   },
   {
-    title: 'More',
-    href: '',
-    icon: DotsThreeCircle,
-    children: [
-      {
-        title: "test",
-        href: '/test',
-        icon: Binoculars
-      },
-      {
-        title: "test",
-        href: '/test',
-        icon: Binoculars
-      },
-      {
-        title: "test",
-        href: '/test',
-        icon: Binoculars
-      },
-    ]
-  }
+    title: 'Settings',
+    href: '/settings',
+    icon: Gear
+  },
+  // {
+  //   title: 'More',
+  //   href: '',
+  //   icon: DotsThreeCircle,
+  //   children: [
+  //     {
+  //       title: "test",
+  //       href: '/test',
+  //       icon: Binoculars
+  //     },
+  //     {
+  //       title: "test",
+  //       href: '/test',
+  //       icon: Binoculars
+  //     },
+  //     {
+  //       title: "test",
+  //       href: '/test',
+  //       icon: Binoculars
+  //     },
+  //   ]
+  // }
 ];
 
 export const dropdownItems: any = {
