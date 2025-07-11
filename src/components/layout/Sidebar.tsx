@@ -12,7 +12,7 @@ import Image from 'next/image'
 export default function Sidebar() {
     const pathname = usePathname()
     return (
-        <aside className="w-16 xl:w-64 h-full p-4 flex items-center justify-center transition-all duration-300">
+        <aside className="w-16 xl:w-64 h-full p-4 flex items-center justify-center transition-all duration-300 bg-[var(--background)]">
             <nav className="space-y-2 w-auto sm:w-48">
 
                 <div className='px-4'>
@@ -36,7 +36,7 @@ export default function Sidebar() {
                                 <a
                                     key={item.href}
                                     className={cn(
-                                        'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-zinc-900',
+                                        'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-[var(--highlight)]',
                                     )}
                                 >
                                     {item.icon && (
@@ -56,8 +56,8 @@ export default function Sidebar() {
                                         key={index}
                                         href={child.href}
                                         className={cn(
-                                            'flex items-center justify-center sm:justify-start gap-3 px-3 py-2 transition-colors hover:bg-zinc-900',
-                                            isActive ? 'font-semibold' : 'font-light',
+                                            'flex items-center justify-center sm:justify-start gap-3 px-3 py-2 transition-colors hover:bg-[var(--highlight)]',
+                                            isActive ? 'font-semibold text-[var(--accent)]' : 'font-light text-[var(--accent-secondary)]',
                                         )}
                                     >
                                         {item.icon && (
@@ -79,8 +79,8 @@ export default function Sidebar() {
                                 key={item.href}
                                 href={item.href}
                                 className={cn(
-                                    'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-zinc-900',
-                                    isActive ? 'font-semibold' : 'font-light',
+                                    'flex items-center justify-center sm:justify-start gap-3 rounded-3xl px-3 py-2 transition-colors hover:bg-[var(--highlight)]',
+                                    isActive ? 'font-semibold text-[var(--accent)]' : 'font-light text-[var(--accent-secondary)]',
                                 )}
                             >
                                 {item.icon && (
@@ -98,13 +98,12 @@ export default function Sidebar() {
 
                 {/* Post Button */}
                 <       div className='flex justify-center'>
-                    <Button onClick={() => alert('Create Post')} className="hidden xl:block 
-                    rounded-full md:rounded-3xl w-full my-2 font-bold text-black aspect-square sm:aspect-auto" size={'lg'}>
+                    <Button onClick={() => alert('Create Post')} className="hidden xl:block rounded-full md:rounded-3xl w-full my-2 font-bold text-[var(--foreground)] aspect-square sm:aspect-auto bg-[var(--accent)] hover:bg-[var(--highlight)]" size={'lg'}>
                         <span className="hidden xl:inline text-lg">Post</span>
                     </Button>
 
                     <button className='xl:hidden' onClick={() => alert('Create Post')}>
-                        <PlusCircle size={42} weight='fill'/>
+                        <PlusCircle size={42} weight='fill' className='text-[var(--accent)]'/>
                     </button>
                 </div>
             </nav>
