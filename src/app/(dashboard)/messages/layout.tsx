@@ -11,7 +11,6 @@ import { ChatContext, ChatProvider } from "@/context/ChatContext";
 import { useAuth } from "@/context/AuthContext";
 
 export default function MessagesLayout({ children }: { children: React.ReactNode }) {
-    const {user} = useAuth()
     return (
         <ChatProvider>
             <LayoutContainer variant={"message"}>
