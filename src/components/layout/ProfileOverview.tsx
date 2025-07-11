@@ -26,22 +26,22 @@ export default function ProfileOverview(){
                 <Button variant={"outline"} size={"sm"}>Edit Profile</Button>
             </div>
             <div className="flex-row w-46 m-3">
-                <div className="font-bold">{user.username}</div>
-                <div className="mb-3 text-zinc-500">{user.email}</div>
-                <div className="flex item-center my-3 text-zinc-500">
+                <div className="font-bold text-[var(--accent)]">{user.username}</div>
+                <div className="mb-3 text-[var(--accent-secondary)]">{user.email}</div>
+                <div className="flex item-center my-3 text-[var(--accent-secondary)]">
                     <CalendarPlus size={"20"} className="mr-2"/>  {user.createdAt}
                 </div>
-                <div className="flex gap-2 my-3 text-foreground">
+                <div className="flex gap-2 my-3 text-[var(--foreground)]">
                     <div className="flex-1">
                         <div className="flex items-center gap-1">
                             <span>{user.followingCount}</span>
-                            <span className="text-zinc-500">Following</span>
+                            <span className="text-[var(--accent-secondary)]">Following</span>
                         </div>
                     </div>
                     <div className="flex-1">
                         <div className="flex items-center gap-1">
                             <span>{user.followerCount}</span>
-                            <span className="text-zinc-500">Followers</span>
+                            <span className="text-[var(--accent-secondary)]">Followers</span>
                         </div>
                     </div>
                 </div>
