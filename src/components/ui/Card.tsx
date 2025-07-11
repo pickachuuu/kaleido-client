@@ -6,9 +6,9 @@ const CardVariants = cva(
   {
     variants: {
       variant: {
-        default: 'rounded-lg',
-        outline: 'border-1 border-zinc-700 rounded-lg p-2',
-        notif: 'border-b-1 border-zinc-700'
+        default: 'rounded-lg bg-[var(--background)] text-[var(--foreground)]',
+        outline: 'border border-[var(--accent-secondary)] rounded-lg p-2 bg-[var(--background)] text-[var(--foreground)]',
+        notif: 'border-b border-[var(--accent-secondary)]',
       },
       size: {
         default: 'w-82',
