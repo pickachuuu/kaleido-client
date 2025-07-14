@@ -8,7 +8,7 @@ const StickyContainerVariants = cva(
         variants: {
             variant: {
                 solid: 'bg-background',
-                transparent: 'bg-foreground/0 backdrop-blur-xl'
+                transparent: ' backdrop-blur-xl bg-white/10 backdrop-blur-md border-b border-white/10'
             }   
         },
         defaultVariants: {
