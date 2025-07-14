@@ -1,26 +1,31 @@
 import { SideBarItem } from '@/types/nav-types';
-import { House, Binoculars, Bell, ChatCenteredText, User, DotsThreeCircle, Gear } from 'phosphor-react'
+import { Home, Hash, Bell, Mail, Bookmark, User, Settings } from 'lucide-react'
 
 export const sidebarNavItems: SideBarItem[] = [
   {
     title: 'Home',
     href: '/home',
-    icon: House
+    icon: Home
   },
   {
     title: 'Explore',
     href: '/explore',
-    icon: Binoculars
+    icon: Hash
   },
   {
     title: 'Notifications',
     href: '/notifications',
     icon: Bell
   },
-{
+  {
     title: 'Messages',
     href: '/messages',
-    icon: ChatCenteredText
+    icon: Mail
+  },
+  {
+    title: 'Bookmarks',
+    href: '/bookmarks',
+    icon: Bookmark
   },
   {
     title: 'Profile',
@@ -30,30 +35,8 @@ export const sidebarNavItems: SideBarItem[] = [
   {
     title: 'Settings',
     href: '/settings',
-    icon: Gear
+    icon: Settings
   },
-  // {
-  //   title: 'More',
-  //   href: '',
-  //   icon: DotsThreeCircle,
-  //   children: [
-  //     {
-  //       title: "test",
-  //       href: '/test',
-  //       icon: Binoculars
-  //     },
-  //     {
-  //       title: "test",
-  //       href: '/test',
-  //       icon: Binoculars
-  //     },
-  //     {
-  //       title: "test",
-  //       href: '/test',
-  //       icon: Binoculars
-  //     },
-  //   ]
-  // }
 ];
 
 export const dropdownItems: any = {
