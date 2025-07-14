@@ -23,11 +23,6 @@ export const sidebarNavItems: SideBarItem[] = [
     icon: Mail
   },
   {
-    title: 'Bookmarks',
-    href: '/bookmarks',
-    icon: Bookmark
-  },
-  {
     title: 'Profile',
     href: '/profile',
     icon: User
