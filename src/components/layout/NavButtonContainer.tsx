@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const navButtonContainerVariants = cva(
-    'flex h-13 z-50',
+    'flex border-b border-white/10',
     {
         variants: {
             variant: {
