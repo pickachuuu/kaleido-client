@@ -11,7 +11,7 @@ export default function ExplorePage() {
 
     return (
         <div>
-            <StickyContainer variant={"solid"}>
+            <StickyContainer>
                 <Header className="px-5 py-1">
                     <SearchBar/>
                 </Header>
@@ -25,12 +25,6 @@ export default function ExplorePage() {
                     <NavButton 
                     onClick={()=>{setActiveTab('News')}}
                     active={activeTab === 'News'}>News</NavButton>
-                    <NavButton 
-                    onClick={()=>{setActiveTab('Sports')}}
-                    active={activeTab === 'Sports'}>Sports</NavButton>
-                    <NavButton 
-                    onClick={()=>{setActiveTab('Entertainment')}}
-                    active={activeTab === 'Entertainment'}>Entertainment</NavButton>
                 </NavButtonContainer>
             </StickyContainer>
 
