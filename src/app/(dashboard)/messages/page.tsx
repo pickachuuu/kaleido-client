@@ -7,7 +7,7 @@ export default function MessagesPage() {
     return (
         <div>
             <StickyContainer>
-                <Header className="px-5 py-2 bg-">
+                <Header className="px-5 py-2">
                     Messages
                 </Header>
                 <Header className="px-5 py-1">
