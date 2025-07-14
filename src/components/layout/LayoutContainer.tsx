@@ -6,7 +6,7 @@ const layoutContainerVariants = cva(
     {
         variants: {
             variant: {
-                default: 'md:grid-cols-[1.2fr_1fr]',
+                default: 'md:grid-cols-[2fr_1fr]',
                 message: 'lg:grid-cols-[1fr_2fr]',
             }
         },
