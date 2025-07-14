@@ -4,7 +4,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-2xl text-sm font-medium transition-colors',
+  'inline-flex items-center justify-center rounded-xl text-sm font-medium transition-all shadow-lg',
   {
     variants: {
       variant: {
@@ -13,6 +13,7 @@ const buttonVariants = cva(
         auth: 'border border-[var(--accent-secondary)] text-[var(--accent)] hover:bg-[var(--accent-secondary)] hover:text-white',
         outline: 'border border-[var(--accent-secondary)] text-[var(--foreground)] hover:bg-[var(--accent-secondary)] hover:text-white',
         destructive: 'bg-red-600 text-white hover:bg-red-700',
+        gradient: 'bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 text-white hover:from-pink-600 hover:via-purple-600 hover:to-cyan-600',
       },
       size: {
         default: 'h-10 px-4 py-2',
