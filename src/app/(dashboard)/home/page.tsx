@@ -6,6 +6,7 @@ import ForYouFeed from "@/components/feeds/ForYouFeed";
 import FollowingFeed from "@/components/feeds/FollowingFeed";
 import StickyContainer from "@/components/ui/StickyContainer";
 import LoginModal from "@/components/modal/LoginModal";
+import Header from "@/components/ui/Header";
 import { useState } from "react";
 
 export default function Home() {
