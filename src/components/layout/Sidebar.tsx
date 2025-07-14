@@ -101,37 +101,37 @@ export default function Sidebar() {
                 <PlusCircle className="w-5 h-5" />
                 <span className="md:block hidden">Create Post</span>
             </Button>
-            <Dropdown>
-                <DropdownTrigger>
-                <div className="hidden md:flex mt-4 items-center gap-3 p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 group cursor-pointer transition-all duration-300 ease-out">
-                    <ProfileAvatar variant="chat" profileUrl="/profile/pikaProfile.jpg" />
-                    <div className="flex-1 min-w-0 md:block hidden">
-                        <p className="text-white font-medium truncate group-hover:text-pink-300 transition-colors duration-300">
-                            Derek Berbo
-                        </p>
-                        <p className="text-gray-400 text-sm truncate group-hover:text-gray-300 transition-colors duration-300">
-                            @cdb.test
-                        </p>
-                    </div>
-                    <MoreHorizontal className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300 md:block hidden" />
-                </div>
-                <div className='md:hidden flex mt-4'>
-                    <ProfileAvatar variant="chat" profileUrl="/profile/pikaProfile.jpg" className='h-10 w-10'/>
-                </div>
-                </DropdownTrigger>
-                <DropdownContent>
-                    <div className='backdrop-blur-sm bg-white/5'>
-                    <DropdownItem>
-                        Sign Out
-                    </DropdownItem>
-                    <DropdownItem>
-                        Profile
-                    </DropdownItem>
-                    </div>
-
-                </DropdownContent>
-
-            </Dropdown>
+            <div className="relative w-full z-50">
+  <Dropdown>
+    <DropdownTrigger>
+      <div className="hidden md:flex mt-4 items-center gap-3 p-3 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 group cursor-pointer transition-all duration-300 ease-out">
+        <ProfileAvatar variant="chat" profileUrl="/profile/pikaProfile.jpg" />
+        <div className="flex-1 min-w-0 md:block hidden">
+          <p className="text-white font-medium truncate group-hover:text-pink-300 transition-colors duration-300">
+            Derek Berbo
+          </p>
+          <p className="text-gray-400 text-sm truncate group-hover:text-gray-300 transition-colors duration-300">
+            @cdb.test
+          </p>
+        </div>
+        <MoreHorizontal className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300 md:block hidden" />
+      </div>
+      <div className='md:hidden flex mt-4'>
+        <ProfileAvatar variant="chat" profileUrl="/profile/pikaProfile.jpg" className='h-10 w-10'/>
+      </div>
+    </DropdownTrigger>
+    <DropdownContent>
+      <div className='bg-gradient-to-br from-[#2d006e] via-[#0a2540] to-[#1a1a2e] rounded-lg'>
+        <DropdownItem>
+          Sign Out
+        </DropdownItem>
+        <DropdownItem>
+          Profile
+        </DropdownItem>
+      </div>
+    </DropdownContent>
+  </Dropdown>
+</div>
 
         </aside>
     )
