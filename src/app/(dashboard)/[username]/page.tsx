@@ -21,7 +21,7 @@ export default function ProfilePage({params}: ProfilePageProps) {
     return (
         <div>
             <StickyContainer>
-                <Header>
+                <Header className="px-5 py-2">
                     {username}
                 </Header>
             </StickyContainer>
