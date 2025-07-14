@@ -3,12 +3,13 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 
 const HeaderVariants = cva(
-    'h-13 text-xl font-bold',
+    'h-13 text-xl font-bold text-white',
     {
         variants: {
             variant: {
-                default: 'p-0',
-                bottomBorder: 'p-3 border-b-1 border-zinc-700'
+                default: 'p-0 ',
+                bottomBorder: 'p-3 border-b-1 border-zinc-700',
+                glass: '',
             }
         },
         defaultVariants: {
