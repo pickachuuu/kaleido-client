@@ -2,17 +2,17 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const stickyPanelVariants = cva(
-    'hidden md:block sticky top-0 h-screen',
+    'sticky top-0 h-full bg-white/10 backdrop-blur-md border-l border-white/10 text-white shadow-md',
     {
         variants: {
-            variant:{
-                default: 'max-w-86',
-                message: 'border-r-1 border-zinc-700'
-            }
+            variant: {
+                default: '',
+                glass: 'bg-white/10 backdrop-blur-md border-l border-white/10 text-white shadow-md',
+            },
         },
-        defaultVariants:{
-            variant: 'default'
-        }
+        defaultVariants: {
+            variant: 'default',
+        },
     }
 );
 
