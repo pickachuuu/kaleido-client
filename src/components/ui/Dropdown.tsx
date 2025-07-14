@@ -71,7 +71,9 @@ export function DropdownContent({ children }: {children: React.ReactNode}){
     return (
         <div 
         ref={contentRef}
-        className="absolute translate-y-180 z-50 min-w-72 w-auto rounded-lg shadow-[0_0_9px_0.5px] bg-background shadow-white/30">
+        className=" absolute left-0 bottom-full mb-2 
+      z-100 md:min-w-full
+      w-56 rounded-lg border bg-background shadow-xl">
             {children}
         </div>
     )
