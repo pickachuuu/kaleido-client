@@ -6,9 +6,10 @@ const CardVariants = cva(
   {
     variants: {
       variant: {
-        default: 'rounded-lg bg-[var(--background)] text-[var(--foreground)]',
-        outline: 'border border-[var(--accent-secondary)] rounded-lg p-2 bg-[var(--background)] text-[var(--foreground)]',
+        default: 'rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 text-white shadow-xl',
+        outline: 'border border-[var(--accent-secondary)] rounded-xl p-2 bg-white/10 backdrop-blur-sm text-white',
         notif: 'border-b border-[var(--accent-secondary)]',
+        glass: 'rounded-xl bg-white/10 backdrop-blur-lg border border-white/10 text-white shadow-xl',
       },
       size: {
         default: 'w-82',
@@ -71,7 +72,7 @@ Card.Header = function CardHeader({ children, className, size, ...props }: CardH
 
 Card.Content = function CardContent({ children, className, ...props }: CardProps) {
     return (
-        <div className={`text-primary ${className}`} {...props}>
+        <div className={cn("text-white", className)} {...props}>
             {children}
         </div>
     );
