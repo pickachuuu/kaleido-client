@@ -13,6 +13,7 @@
 # testing
 /coverage
 /src/components/features/overflowTest.tsx
+/public/images/test
 
 # next.js
 /.next/
