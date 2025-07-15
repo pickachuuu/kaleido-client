@@ -121,12 +121,16 @@ export default function Sidebar() {
       </div>
     </DropdownTrigger>
     <DropdownContent>
-      <div className='bg-gradient-to-br from-[#2d006e] via-[#0a2540] to-[#1a1a2e] rounded-lg'>
+      <div className='bg-gradient-to-br from-[#2d006e] via-[#0a2540] to-[#1a1a2e] rounded-xl text-bold py-2 font-bold '>
         <DropdownItem>
-          Sign Out
+          <button className='my-1 hover:bg-[#1a1a2e] w-full text-start pl-2'>
+          View account settings
+          </button>
         </DropdownItem>
         <DropdownItem>
-          Profile
+          <button className='my-1 hover:bg-[#1a1a2e] w-full text-start pl-2'>
+          Log out @username
+          </button>
         </DropdownItem>
       </div>
     </DropdownContent>
