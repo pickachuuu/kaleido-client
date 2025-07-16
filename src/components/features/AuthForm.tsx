@@ -40,7 +40,7 @@ export default function AuthForm() {
                         Join Kaleido.
                     </Card.Header>
                     
-                    <Card size={"default"}>
+                    <Card size={"default"} variant={"clear"}>
                         <Card.Content>
                             <div className="col col-span-1">
                                 <div>
