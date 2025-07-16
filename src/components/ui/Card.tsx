@@ -2,11 +2,12 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const CardVariants = cva(
-  '',
+  'px-5 py-3',
   {
     variants: {
       variant: {
         default: 'rounded-xl bg-white/5 border border-white/10 text-white shadow-xl',
+        clear: 'p-0',
         outline: 'border border-[var(--accent-secondary)] rounded-xl p-2 bg-white/10 backdrop-blur-sm text-white',
         notif: 'border-b border-[var(--accent-secondary)]',
         glass: 'rounded-xl bg-white/10 backdrop-blur-lg border border-white/10 text-white shadow-xl',
